@@ -12,3 +12,9 @@ Start with the intended change and review the diff in the context of affected ca
 - **Tests and verification.** Check that tests exercise the behavior at risk through an appropriate entry point, including relevant failure or boundary cases. Flag missing coverage when it leaves a specific regression risk unguarded. Describe checks as run only when they were actually performed.
 
 Report actionable issues that the PR introduces or makes reachable. For each finding, give its severity, the narrowest relevant location in the diff, the triggering condition, and the concrete impact. Base severity on impact and likelihood. Ground each finding in the code and avoid duplicates, stylistic preferences, and speculative risks.
+
+### Codex Security
+
+When the Codex Security plugin is available to the reviewer, use its diff review workflow for changes that affect security or privacy. Scope the review to the PR and the supporting code needed to assess impact. Use static evidence to verify findings and recommend mitigations. Deduplicate findings from the general review. If the plugin is unavailable, review the changed code for security and privacy directly and state the limitation when it affects coverage.
+
+For automatic GitHub PR reviews in Codex Cloud, repository maintainers configure **Auto security review** in [Codex Code Review settings](https://chatgpt.com/settings/code-review). Where the workspace supports Security Review, choose **All PRs** and **Whenever code review runs** to pair it with the general review. The repository rules guide review behavior. The cloud settings control whether the automatic Security Review runs.
